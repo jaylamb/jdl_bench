@@ -1,0 +1,9 @@
+# jdl_bench/.gitignore
+
+# Git ignore rules for the jdl_bench repository
+
+# Bazel Auto-generated
+bazel-bin
+bazel-jdl_bench
+bazel-out
+bazel-testlogs
