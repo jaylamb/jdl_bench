@@ -1,0 +1,118 @@
+% Author  : Jay D. Lamb
+% License : MIT
+
+% File        : section/commands.tex
+% Description : Resume custom Latex commands.
+
+% Section heading labels
+\renewcommand{\section}[2]{\vspace{5pt}
+  \colorbox{secondary}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{7pt}#2}}}
+}
+
+% Entry start and end, for spacing
+\newcommand{\resumeEntryStart}{\begin{itemize}[leftmargin=2.5mm]}
+\newcommand{\resumeEntryEnd}{\end{itemize}\vspace{\entryspacing}}
+
+% Itemized list for the bullet points under an entry, if necessary
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=4.5mm]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% Resume item
+\renewcommand{\labelitemii}{\bulletstyle}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Entry with title, subheading, date, and location
+\newcommand{\resumeEntryTSDL}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+      \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+% Entry with title, subheading, date, location, and profession
+\newcommand{\resumeEntryTSDLP}[5]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+      \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
+      \textit{\color{accent}\small#5}
+    \end{tabular*}\vspace{-6pt}
+}
+
+% Entry for special (skills)
+\newcommand{\resumeEntryS}[2]{
+  \item[]\small{
+    \textbf{\color{primary}#1 }{ #2 \vspace{-6pt}}
+  }
+}
+
+% Entry for bottom note(s)
+\newcommand{\resumeEntryNote}[1]{
+  \item[]\small{
+    { #1 \vspace{-10pt}}
+  }
+}
+
+% Double column header
+\newcommand{\doublecol}[6]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    {
+      \begin{tabular}[c]{l}
+        \fontsize{35}{45}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}}
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l@{\hspace{1.5em}}l}
+        {\small#1} & {\small#2} \\
+        {\small#3} & {\small#4} \\
+        {\small#5} & {\small#6}
+      \end{tabular}
+    }
+  \end{tabular*}
+}
+
+% Single column header
+\newcommand{\singlecol}[6]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    {
+      \begin{tabular}[b]{l}
+        \fontsize{35}{45}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}}
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l}
+        {\small#1} \\
+        {\small#2} \\
+        {\small#3} \\
+        {\small#4} \\
+        {\small#5} \\
+        {\small#6}
+      \end{tabular}
+    }
+  \end{tabular*}
+}
+
+% Double column header with QR code
+\newcommand{\doublecolqr}[4]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{0.2cm}}l@{\extracolsep{\fill}}r}
+    {
+      \githubqr
+    } & {
+      \begin{tabular}[c]{l}
+        \fontsize{35}{45}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}}
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l@{\hspace{1.5em}}l}
+        {\small#1} & {\small#2} \\
+        {\small#3} & {\small#4}
+      \end{tabular}
+    }
+  \end{tabular*}
+}
+
