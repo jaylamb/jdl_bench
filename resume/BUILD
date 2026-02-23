@@ -11,4 +11,7 @@ py_binary(
         "section/defines.tex",
         "section/skills.tex",
     ],
+    deps = [
+        requirement("rich"),
+    ],
 )
