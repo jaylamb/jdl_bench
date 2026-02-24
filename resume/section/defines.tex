@@ -1,0 +1,53 @@
+% Author  : Jay D. Lamb
+% License : MIT
+
+% File        : section/defines.tex
+% Description : Resume defines. 
+
+% Number of columns in header for name, phone, etc...
+\def \headertype {\doublecolqr} % \singlecol, \doublecol, or \doublecolqr
+
+% Colors
+\definecolor{primary}{HTML}{000000}   % White
+\definecolor{secondary}{HTML}{0D47A1} % Blue
+\definecolor{accent}{HTML}{263238}    % Dark Grey
+
+% Name
+\def \fullname {Jay D. Lamb}
+\def \subtitle {Computer Engineer}
+
+% Phone
+\def \phoneicon {\faPhone}
+\def \phonetext {+1-406-598-4072}
+
+% LinkedIn
+\def \linkedinicon {\faLinkedin}
+\def \linkedinlink {http://www.linkedin.com/in/jay-lamb-032166174/}
+\def \linkedintext {/jay-lamb}
+
+% E-mail
+\def \emailicon {\faEnvelope}
+\def \emaillink {mailto:jaylamb@gmail.com}
+\def \emailtext {jaylamb@gmail.com}
+
+% GitHub
+\def \githubicon {\faGithub}
+\def \githublink {https://github.com/jaylamb}
+\def \githubtext {/jaylamb}
+
+% Misc. settings
+\def \entryspacing {-0pt}
+\def \bulletstyle {\faChevronCircleRight[solid]}
+
+% Defines to make listing easier
+\def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
+\def \phone    {\phoneicon    \hspace{3pt}                    {\phonetext   }}
+\def \email    {\emailicon    \hspace{3pt}\href{\emaillink}   {\emailtext   }}
+\def \github   {\githubicon   \hspace{3pt}\href{\githublink}  {\githubtext  }}
+\def \githubqr {\qrcode[height=1.5cm]{https://www.github.com/jaylamb}}
+
+% Define the link colors
+\hypersetup{
+    colorlinks=true,
+    urlcolor=secondary,
+}
