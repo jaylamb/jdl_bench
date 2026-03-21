@@ -1,0 +1,8 @@
+# ignore auxiliary files
+*.aux
+
+# ignore log files
+*.log
+
+# ignore output files
+*.out
