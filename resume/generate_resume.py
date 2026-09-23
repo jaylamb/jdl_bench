@@ -40,7 +40,7 @@ class GenerateResume:
         self.logger.setLevel(level=logging.INFO)
         self.logger.info("Generating document...")
 
-        self.repository_root_directory = os.environ["BUILD_WORKING_DIRECTORY"]
+        self.repository_root_directory = Path(os.environ["BUILD_WORKING_DIRECTORY"])
         self.document_filepath = document_filepath
         self.document_filename = self.document_filepath.stem
 
